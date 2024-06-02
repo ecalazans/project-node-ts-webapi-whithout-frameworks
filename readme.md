@@ -81,6 +81,50 @@ export enum HttpMethod {
 }
 ```
 
+#### Endpoints
+
+A API fornece os seguintes endpoints:
+
+- GET /podcasts: Retorna uma lista de todos os episódios de podcasts.
+
+```typescript
+[
+  {
+    podcastName: "Flow",
+    episode: "CBUM - Flow #319",
+    videoId: "pQSuQmUfS30",
+    cover: "https://i.ytimg.com/vi/pQSuQmUfS30/hq720.jpg",
+    link: "https://www.youtube.com/watch?v=pQSuQmUfS30&pp=ygUMY2J1bSBubyBmbG93",
+    category: ["saúde", "esporte", "bodybuilder"],
+  },
+  {
+    podcastName: "Flow",
+    episode: "IGORFINA - Extra Flow",
+    videoId: "vhykXU7PPVc",
+    cover: "https://i.ytimg.com/vi/vhykXU7PPVc/hqdefault.jpg",
+    link: "https://www.youtube.com/watch?v=pQSuQmUfS30&pp=ygUMY2J1bSBubyBmbG93",
+    category: ["comédia", "humor", "cinema"],
+  },
+];
+```
+
+- GET /episodes: Retorna uma lista de episódios filtrados pelo nome do podcast.
+
+Parâmetros de Query: podcastName _(Nome do podcast para filtrar os episódios_).
+
+```typescript
+[
+  {
+    podcastName: "Flow",
+    episode: "CBUM - Flow #319",
+    videoId: "pQSuQmUfS30",
+    cover: "https://i.ytimg.com/vi/pQSuQmUfS30/hq720.jpg",
+    link: "https://www.youtube.com/watch?v=pQSuQmUfS30&pp=ygUMY2J1bSBubyBmbG93",
+    category: ["saúde", "esporte", "bodybuilder"],
+  },
+];
+```
+
 ### Como Rodar o Projeto
 
 1. Clone o repositório.
